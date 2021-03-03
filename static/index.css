@@ -1,0 +1,434 @@
+/*
+Harshit Patel & Preet Panchal
+(1004779215) & (1005250247)
+CSCB20 - A. Abbas
+April/05/2019 
+*/ 
+
+
+/****** CSS for HOME ******/
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+	margin: auto;
+	overflow-x: hidden;
+	background: #E1F3FF; 
+	font-family: 'Raleway', sans-serif;  
+}
+
+#header {
+	margin: auto;
+	text-align: center; 
+	/* width: 100%;  */
+	padding: 5px 10px;
+	background-color: #361270; 
+	color: white;
+}
+
+
+/***** CSS for NAVBAR ******/
+#navbar {
+	overflow: hidden;
+	text-align: center; 
+	padding: 5px;
+	background-color: #361270; 
+}
+#navbar li {
+	display: inline-block;
+}
+.nav-hover {
+	text-decoration: none;
+	display: inline-block; 
+	color: white;
+	font-size: 20px; 
+	padding: 10px;
+
+}
+.nav-hover::after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 1px; 
+	background-color: white;
+	transition: width .3s; 
+}
+.nav-hover:hover::after {
+	width: 100%;
+	transition: width .3s; 
+}
+#active {
+	font-size: 20px; 
+	padding: 10px;
+	color: #F9E085;
+	box-shadow: inset 0 5px 10px rgba(0,0,0,.1), 0 2px 5px rgba(0,0,0,.5);
+}
+#active,
+.nav-hover:hover {
+	text-shadow: 0 0 20px rgb(255,224,27),
+				 0 0 20px rgb(255,224,27);
+}
+
+/****** CSS for sticky Navbar ******/
+.content-container {
+	width: 90%;
+	margin: auto;
+	text-align: justify; 
+	color: #490606; 
+	padding: 20px; 
+	font-size: 16px;
+}
+.sticky {
+	
+  	position: fixed;
+  	top: 0;
+	width: 100%;
+}
+.sticky + .content-container {
+	margin: auto;
+  	padding-top: 60px;
+}
+
+.subtitle {
+	color: #860D0D;
+}
+
+.anna {
+	width: 10%;
+	height: 10%; 
+}
+
+.midterm-room:{
+	width: 60%;
+	height: 60%; 
+}
+
+
+/* CSS for Calendar page! */
+iframe{
+	align: center; 
+}
+
+
+/* CSS for Announcements page! */
+.announcement {
+	background-color: #eee;
+	color: navy;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	font-weight:bold;
+	transition: 0.4s;
+}
+
+.announcement::before{
+	font-weight: bold;
+	font-size: 15px;
+	content: "+";
+	vertical-align: text-top;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 0px;
+	background: radial-gradient(circle at left, #CCC 50%, transparent 50%);
+}
+
+.panel {
+	padding: 0 18px;
+	display: none;
+	background-color: white;
+	overflow: hidden;
+}
+
+
+/******* CSS for Course-Team section *******/
+.flex-table {
+	display: flex;
+	flex-wrap: wrap;
+	width: 80%;
+	margin: auto;
+	padding: 0;
+	color: white;
+}
+.c1 {
+	width:10%;
+}
+.c2 {
+	width:10%;
+}
+.c3 {
+	width:30%;
+}
+.c4 {
+	width:20%;
+}
+.c5 {
+	width:30%;
+}
+.c3 {
+	width:30%;
+}
+.c4 {
+	width:20%;
+}
+.c6 {
+	width:70%;
+}  /* .c6 is used in the Announcements page */
+.c7 {
+	width: 50%;  	
+}
+.c11 {
+	width:10%;
+}
+.c12 {
+	width:22.5%;
+}
+.c21 {
+	width:20%;
+}
+.c22 {
+	width:8%;
+}
+.c31 {
+	width:15%;
+}
+.c32 {
+	width:15%;
+}
+.c33 {
+	width:70%;
+}
+
+
+.flext-cell {
+	box-sizing: border-box;
+	text-align:center;
+	overflow: hidden;
+	list-style: none;
+	border-style: dotted;
+	border-color: black;
+	padding-top:0.5em;
+	background-color: #FFF2F4;
+	color: black; 
+}
+.flext-cell a:hover {
+	color: #860D0D;
+}
+.flext-cell li {
+	text-align: left;
+}
+.flex-th {
+	background-color: #361270;
+	color: white;
+	font-weight: bold;
+	padding: 7px;
+}
+
+.flex-table:nth-of-type(2n) {
+  background-color: #e6ffff;
+}
+.flex-table:nth-of-type(2n+1) {
+  background-color: #99d8dd;
+}
+
+/* below is the adjustment made to the Course-Team table */
+@media only screen and (max-width: 550px) {
+	.main-table .flex-table {
+		width: 90%;
+		flex-direction: column;
+		border-style: dotted;
+		border-color: black;
+		padding: 0.8em 1.2em;
+	}
+	.main-table .flext-cell {
+		width:100%;
+		margin: auto;
+		border: none;
+		text-align: left;
+	}
+	.main-table .flex-th {
+		background-color: #361270;
+		color: white; 
+	}
+}
+
+.flext-cell:hover {
+	background-color: #FFF6B9;
+	color: #490606;
+}
+
+.change-grade {
+	text-align: center; 
+}
+
+.change-grade input[type="submit"] {
+	border: none;
+	outline: none;
+	width: 30%;
+	height: 40px;
+	background: #361270;
+	color: white;
+	font-size: 18px;
+	border-radius: 20px;
+}
+.change-grade input[type="submit"]:hover {
+	cursor: pointer; 
+	background: #860D0D;
+	color: white; 
+}
+
+
+
+/* CSS for NEW Feedback Page! */
+
+.feedback-box {
+	width: 60%; 
+	margin: auto;
+	box-sizing: border-box;
+	border-radius: 10%;
+	box-shadow: inset 0 5px 10px rgba(0,0,0,1), 0 2px 5px rgba(0,0,0,1); 
+	padding: 30px 50px; 
+	background: black;
+	color: white;
+}
+.feedback-title {
+	margin: auto;
+	padding: 10px; 
+	text-align: center;
+	color: #F9E085; 
+	font-size: 30px; 
+}
+.feedback-box p {
+	margin: auto;
+	padding: 0;
+	font-weight: bold;
+}
+.feedback-box input {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.feedback-box input[type="submit"] {
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #361270;
+	color: white;
+	font-size: 18px;
+	border-radius: 20px;
+}
+.feedback-box input[type="submit"]:hover {
+	cursor: pointer; 
+	background: #860D0D;
+	color: white; 
+}
+.form-control {
+	width: 100%; 
+	background: transparent;
+	border: none; 
+	outline: none; 
+	border-bottom: 1px dashed #F9E085;
+	font-size: 18px; 
+	margin-bottom: 16px; 
+}
+
+
+
+
+/* CSS for remark form for students! */
+textarea {
+	color: #a0d4d5;
+}
+.remark-box {
+	width: 60%; 
+	margin: auto;
+	box-sizing: border-box;
+	border-radius: 10%;
+	box-shadow: inset 0 5px 10px rgba(0,0,0,1), 0 2px 5px rgba(0,0,0,1); 
+	padding: 30px 50px;
+	align-items: center;  
+	background: black;
+	color: white;
+}
+.remark-title {
+	margin: auto;
+	padding: 10px; 
+	text-align: center;
+	color: #F9E085; 
+	font-size: 30px; 
+}
+.remark-box p {
+	margin: auto;
+	padding: 0;
+	font-weight: bold;
+}
+.remark-box input {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.remark-box input[type="submit"] {
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #361270;
+	color: white;
+	font-size: 18px;
+	border-radius: 20px;
+}
+.remark-box input[type="submit"]:hover {
+	cursor: pointer; 
+	background: #860D0D;
+	color: white; 
+}
+
+.form-control {
+	width: 100%; 
+	background: transparent;  
+	border: none; 
+	outline: none; 
+	border-bottom: 1px dashed #F9E085;
+	font-size: 18px; 
+	margin-bottom: 16px; 
+}
+
+#remark-dropdown {
+	background-color: #a0d4d5;  
+}
+
+
+
+/****** FOOTER ******/
+#main-footer {
+	background: black;
+	width: 100%;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	margin-top: 50px;
+	position: relative;
+}
+
+.foot-text {
+	color: #F9E085;
+}
+
+
+/* Notice for feedback,grades,login page */
+.error {
+	color:pink;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

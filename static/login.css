@@ -1,0 +1,145 @@
+/*
+Harshit Patel & Preet Panchal
+(1004779215) & (1005250247)
+CSCB20 - A. Abbas
+April/05/2019 
+*/ 
+
+
+/****** CSS for LOGIN ******/
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+	margin: auto;
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(images/utsc-pic-login-background.jpg) ;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	font-family: 'Raleway', sans-serif;  
+}
+
+#header {
+	text-align: center; 
+	padding: 20px;
+	background-color: #361270; 
+	color: white;
+}
+
+.error {
+	color: #A0D4D5;
+}
+
+.login-box {
+	width: 30%;  
+	margin: auto;
+	box-sizing: border-box;
+	border-radius: 10%;
+	box-shadow: inset 0 5px 10px rgba(0,0,0,1), 0 2px 5px rgba(0,0,0,1); 
+	padding: 30px 50px; 
+	background: rgba(0,0,0,0.8);
+	color: white;
+}
+
+.login-title {
+	margin: auto;
+	padding: 10px; 
+	text-align: center;
+	color: #F9E085; 
+	font-size: 30px; 
+}
+.login-box p {
+	margin: auto;
+	padding: 0;
+	font-weight: bold;
+}
+.login-box input {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.login-box input[type="submit"] {
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #361270;
+	color: white;
+	font-size: 18px;
+	border-radius: 20px;
+}
+.login-box input[type="submit"]:hover {
+	cursor: pointer; 
+	background: #860D0D;
+	color: white; 
+}
+
+.login-box a:hover {
+	color: #F9E085;
+}
+
+.form-control {
+	width: 100%; 
+	background: transparent;
+	border: none; 
+	outline: none; 
+	border-bottom: 1px dashed #F9E085;
+	font-size: 18px; 
+	margin-bottom: 16px; 
+}
+
+
+
+/****** CSS for REGISTER ******/
+.register-box {
+	width: 40%;  
+	margin: auto;
+	box-sizing: border-box;
+	border-radius: 10%;
+	box-shadow: inset 0 5px 10px rgba(0,0,0,1), 0 2px 5px rgba(0,0,0,1); 
+	padding: 30px 50px; 
+	background: rgba(0,0,0,0.8);
+	color: white;
+}
+
+.register-box p {
+	margin: auto;
+	padding: 0;
+	font-weight: bold;
+}
+.register-box input {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.register-box input[type="submit"] {
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #361270;
+	color: white;
+	font-size: 18px;
+	border-radius: 20px;
+}
+.register-box input[type="submit"]:hover {
+	cursor: pointer; 
+	background: #860D0D;
+	color: white; 
+}
+
+.register-box a:hover {
+	color: #F9E085;
+}
+
+.form-control {
+	width: 100%; 
+	background: transparent;
+	border: none; 
+	outline: none; 
+	border-bottom: 1px dashed #F9E085;
+	font-size: 18px; 
+	margin-bottom: 16px; 
+}
+#remark-dropdown {
+	background-color: #a0d4d5;  
+}
+
+input {
+	color: #a0d4d5;
+}
