@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}CSCB20 - Assignments{% endblock %}
+{% block assignments %}<li><a id="active" class="nav-hover" href="/assignments">Assignments</a></li>                {% endblock %}
+
+{% block content %}
+
+		<!-- Course-Info -->
+		<div class="content-container">
+			<section id="overview">
+				<h1 class="subtitle"><strong>Overview:</strong></h1>
+				<hr>
+				<p>Here are the assignment and exercise topics, 
+				weights, and due dates. I will be posting the 
+				exercise and assignment handouts here. All 
+				exercises and assignments will be submitted 
+				on <a class="subtitle" href="https://markus.utsc.utoronto.ca/cscb20w19" target="blank">MarkUs<a>
+				.</p>
+			</section> 
+			<br>
+		
+			<section id="assignments-list">
+				<h1 class="subtitle"><strong>Assignments:</strong></h1>
+				<hr>
+			</section>
+			
+			<p><strong>Assignment 1: </strong>
+				<a class="subtitle" href="{{ url_for('static', filename='assignments/B20Assignment1.pdf') }}" target="blank">
+				<em>A1.pdf</em></a>
+			</p>
+
+			<p><strong>Assignment 2: </strong>
+				<a class="subtitle" href="{{ url_for('static', filename='assignments/B20Assignment2.pdf') }}" target="blank">
+				<em>A2.pdf</em></a>
+			</p>
+			<br>
+
+			<section id="solutions-list">
+				<h1 class="subtitle"><strong>Solutions:</strong></h1>
+				<hr>
+			</section>
+			
+			<p><strong>Solution A1: </strong>
+				<a class="subtitle" href="{{ url_for('static', filename='assignments/B20Assignment1.pdf') }}" target="blank">
+				<em>solnA1.pdf</em></a>
+			</p>
+
+			<p><strong>Solution A2: </strong>
+				<a class="subtitle" href="{{ url_for('static', filename='assignments/B20Assignment2.pdf') }}" target="blank">
+				<em>solnA2.pdf</em></a>
+			</p>
+		</div>
+		<br><br>
+
+{% endblock %}

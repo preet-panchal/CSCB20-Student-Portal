@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<!--
+Harshit Patel & Preet Panchal
+(1004779215) & (1005250247)
+CSCB20 - A. Abbas
+April/05/2019 
+-->
+
+<html>
+<!-- HOME -->
+	<head>
+		<title>{% block title %}CSCB20 - Home{% endblock %}</title>
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/uoftlogo.png') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+	</head>
+	<body>
+		<div id="header">
+			<h1><strong>CSCB20 - Intro to Databases and Web Applications</strong></h1>
+		</div>
+
+		<!-- NAVBAR -->
+		<div id="navbar">
+			{% block home %}<li><a class="nav-hover" href="/index">Home</a></li>											{% endblock %}
+			{% block announcements %}<li><a class="nav-hover" href="/announcements">Announcements</a></li>          {% endblock %}
+			{% block calendar %}<li><a class="nav-hover" href="/calendar">Calendar</a></li>                         {% endblock %}
+			<li><a class="nav-hover" href="https://piazza.com/class/jr7mjhytaij3jc" target="blank">Piazza</a></li>  
+			{% block lectures %}<li><a class="nav-hover" href="/lectures">Lectures</a></li>                         {% endblock %}
+			{% block assignments %}<li><a class="nav-hover" href="/assignments">Assignments</a></li>                {% endblock %}
+			{% block exams %}<li><a class="nav-hover" href="/exams">Exams</a></li>                                  {% endblock %}
+			{% block resources %}<li><a class="nav-hover" href="/resources">Resources</a></li>                      {% endblock %}
+			{% block feedback %}<li><a class="nav-hover" href="/feedback">Feedback</a></li>                         {% endblock %}
+			{% block grades %}<li><a class="nav-hover" href="/grades">Grades</a></li>                               {% endblock %}
+			{% if ut=='instructor' %}                                                                               
+				{% block remark %}<li><a class="nav-hover" href="/remark_req">Remark Requests</a></li>             {% endblock %}
+			{% endif %}
+			<li><a class="nav-hover" href="/logout">Logout</a></li> 
+		</div>
+
+		{% block content %}{% endblock %}
+
+		<!-- FOOTER --> 
+		<footer id="main-footer">
+			<p>Copyright &copy 2019; CSCB20 - 
+			Intro to Databases and Web Applications</p>
+			<a class="foot-text" href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">
+			Faculty of Computer Science, UTSC</a>
+			<p>(Site designed by <strong class="foot-text">Harshit Patel</strong> and <strong class="foot-text">Preet Panchal</strong>)</p>
+		</footer>
+		
+		<script src="{{ url_for('static', filename='index.js') }}"></script>
+
+
+	</body>
+</html>

@@ -1,0 +1,215 @@
+{% extends "layout.html" %}
+
+{% block title %}CSCB20 - Lectures{% endblock %}
+{% block lectures %}<li><a id="active" class="nav-hover" href="/lectures">Lectures</a></li>{% endblock %}
+
+{% block content %}
+
+		<!-- Lectures -->
+		<div class="content-container">
+			<section id="schedule">
+			<h1 class="subtitle"><strong>Lecture and Tutorial Schedule:</strong></h1>
+			<hr>
+			</section>
+			<p>
+				<em>Please print and bring these notes/worksheets to each class accordingly!</em>
+			</p>
+		</div>
+
+		<!-- Lectures flex table-->
+		<div class="main-table">
+			<div class="flex-table">
+				<div class="flext-cell c1 flex-th">WEEK</div>
+				<div class="flext-cell c2 flex-th">DATE</div>
+				<div class="flext-cell c3 flex-th">LECTURE MATERIAL</div>
+				<div class="flext-cell c4 flex-th">TUTORIAL MATERIAL</div>
+				<div class="flext-cell c5 flex-th">EXTRA RESOURCES</div>
+			</div>
+	
+			<div class="flex-table">
+				<div class="flext-cell c1">1</div>
+				<div class="flext-cell c2">Jan 7</div>
+				<div class="flext-cell c3">Introduction to Database <a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">slides</a></div>
+				<div class="flext-cell c4">
+					<ul>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">Lab setup</a></li>
+					</ul>
+				</div>
+				<div class="flext-cell c5">
+					<ul>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">Worksheet 1</a></li>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">Worksheet 1 Solution</a></li>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="flex-table">
+				<div class="flext-cell c1">2</div>
+				<div class="flext-cell c2">Jan 14</div>
+				<div class="flext-cell c3">Schema Diagrams, Relational Algebra <a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">slides</a></div>
+				<div class="flext-cell c4">
+					<ul>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">handout</a></li>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">solution</a></li>
+					</ul>
+				</div>
+				<div class="flext-cell c5">
+					<ul>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="flex-table">
+				<div class="flext-cell c1">3</div>
+				<div class="flext-cell c2">Jan 21</div>
+				<div class="flext-cell c3">SQL and MySQL <a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">slides</a></div>
+				<div class="flext-cell c4">
+					<ul>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">handout</a></li>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">solution</a></li>
+					</ul>
+				</div>
+				<div class="flext-cell c5">
+					<ul>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="flex-table">
+				<div class="flext-cell c1">4</div>
+				<div class="flext-cell c2">Jan 28</div>
+				<div class="flext-cell c3">MySQL Queries, Creating and Editing Tables <a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">slides</a></div>
+				<div class="flext-cell c4">
+					<ul>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">handout</a></li>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">solution</a></li>
+					</ul>
+				</div>
+				<div class="flext-cell c5">
+					<ul>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">Worksheet 2</a></li>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">Worksheet 2</a></li>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="flex-table">
+				<div class="flext-cell c1">5</div>
+				<div class="flext-cell c2">Feb 4</div>
+				<div class="flext-cell c3">Joins <a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">slides</a></div>
+				<div class="flext-cell c4">
+					<ul>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">handout</a></li>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">solution</a></li>
+					</ul>
+				</div>
+				<div class="flext-cell c5">
+					<ul>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="flex-table">
+				<div class="flext-cell c1">6</div>
+				<div class="flext-cell c2">Feb 11</div>
+				<div class="flext-cell c3">HTML, CSS <a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">slides</a></div>
+				<div class="flext-cell c4">
+					<ul>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">handout</a></li>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">solution</a></li>
+					</ul>
+				</div>
+				<div class="flext-cell c5">
+					<ul>
+						<li><a href="https://www.youtube.com/watch?v=UB1O30fR-EE">HTML Crash Course</a></li>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="flex-table">
+				<div class="flext-cell c1">7</div>
+				<div class="flext-cell c2">Feb 18</div>
+				<div class="flext-cell c3"></div>
+				<div class="flext-cell c4">READING WEEK</div>
+				<div class="flext-cell c5"></div>
+			</div>
+	
+			<div class="flex-table">
+				<div class="flext-cell c1">8</div>
+				<div class="flext-cell c2">Feb 25</div>
+				<div class="flext-cell c3">PHP <a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">slides</a></div>
+				<div class="flext-cell c4">
+					<ul>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">handout</a></li>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">solution</a></li>
+					</ul>
+				</div>
+				<div class="flext-cell c5">
+					<ul>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="flex-table">
+				<div class="flext-cell c1">9</div>
+				<div class="flext-cell c2">Mar 4</div>
+				<div class="flext-cell c3">PHP and SQL <a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">slides</a></div>
+				<div class="flext-cell c4">
+					<ul>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">handout</a></li>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">solution</a></li>
+					</ul>
+				</div>
+				<div class="flext-cell c5">
+					<ul>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">Worksheet 3</a></li>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">Worksheet 3 Solution</a></li>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="flex-table">
+				<div class="flext-cell c1">10</div>
+				<div class="flext-cell c2">Mar 11</div>
+				<div class="flext-cell c3">JavaScript and jQuery <a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">slides</a></div>
+				<div class="flext-cell c4">
+					<ul>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">handout</a></li>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">solution</a></li>
+					</ul>
+				</div>
+				<div class="flext-cell c5">
+					<ul>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="flex-table">
+				<div class="flext-cell c1">11</div>
+				<div class="flext-cell c2">Mar 18</div>
+				<div class="flext-cell c3">jQuery, AJAX, JSON <a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">slides</a></div>
+				<div class="flext-cell c4">
+					<ul>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">handout</a></li>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">solution</a></li>
+					</ul>
+				</div>
+				<div class="flext-cell c5">
+					<ul>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">Worksheet 4</a></li>
+						<li><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}">Worksheet 4 Solution</a></li>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="flex-table">
+				<div class="flext-cell c1">12</div>
+				<div class="flext-cell c2">Mar 25</div>
+				<div class="flext-cell c3">Last Year's final </div>
+				<div class="flext-cell c4"><a href="{{ url_for('static', filename='lectures/dummy.pdf') }}"> EXAM</a></div>
+				<div class="flext-cell c5"></div>
+			</div>
+		</div>
+		<br><br>
+
+{% endblock %}

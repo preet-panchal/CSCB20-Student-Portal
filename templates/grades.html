@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+{% block title %}CSCB20 - Grades{% endblock %}
+{% block grades %}<li><a id="active" class="nav-hover" href="/grades">Grades</a></li>{% endblock %}
+
+{% block content %}
+
+	{% if ut == "student" %}
+		<!-- Student's-Grades -->
+		<div class="content-container">
+			<section id="grades-list">
+			{% for post in data %}
+				<h3 class="subtitle"><strong>Welcome {{firstname}}, here your grades are: </strong></h3>
+			   	<p>Quiz 1: 		{{post.q1}}</p>
+			   	<p>Quiz 2: 		{{post.q2}}</p>
+			   	<p>Quiz 3: 		{{post.q3}}</p>
+			   	<p>Quiz 4: 		{{post.q4}}</p>
+			   	<p>Assignment 1: {{post.a1}}</p>
+			   	<p>Assignment 2: {{post.a2}}</p>
+			   	<p>Assignment 3: {{post.a3}}</p>
+			   	<p>Midterm Exam: {{post.midterm}}</p>
+			   	<p>Final Exam: 	{{post.final}}</p>
+			   	<p>Labs:		 	{{post.practical}}</p>
+			{% endfor %}
+		   	</section>
+		   	<br>
+
+		   	<!-- Remark-Form -->
+			<section class="remark-box">
+				<h1 class="remark-title"><strong>Remark Request Form:</strong></h1>
+				<br>
+				<form id="remark-request" action="" method="POST">
+					<select name="ins_username" id="remark-dropdown" class="form-control">
+					{% for item in test_categories %}
+						<option value="{{ item.test_categories }}">{{ item.test_categories }}</option>
+					{% endfor %}
+					</select>
+					<br>
+					<br>
+
+					<p>Explaination for remark request:</p>
+					<br>
+					<textarea name="msg1" class="form-control" placeholder="Explain here: " rows="4" required></textarea>
+					<br>
+
+					<input type="submit" name="submit" value="SUBMIT REMARK REQUEST">
+				</form>
+			</section>
+		</div>
+		
+		{% endif %}
+		{% if ut == "instructor" %}
+			<!-- Student's-Grades -->
+			<div class="content-container">
+				<section id="grades-list">
+					<h3 class="subtitle"><strong>Students' Grades:</strong></h3>
+				</section>
+			</div>
+
+			<!-- table for students' grades --> 
+			<div class="grades-table">
+				<div class="flex-table">
+					<div class="flext-cell c21 flex-th">Username</div>
+					<div class="flext-cell c22 flex-th">Q1</div>
+					<div class="flext-cell c22 flex-th">Q2</div>
+					<div class="flext-cell c22 flex-th">Q3</div>
+					<div class="flext-cell c22 flex-th">Q4</div>
+					<div class="flext-cell c22 flex-th">Asgn1</div>
+					<div class="flext-cell c22 flex-th">Asgn2</div>
+					<div class="flext-cell c22 flex-th">Asgn3</div>
+					<div class="flext-cell c22 flex-th">Midterm</div>
+					<div class="flext-cell c22 flex-th">Final</div>
+					<div class="flext-cell c22 flex-th">Labs</div>
+				</div>
+
+				<form method='POST' class="change-grade">
+					{% for post in data %}
+						<div class="flex-table">
+							<div class="flext-cell c21">{{post.username}}</div>
+
+							<div class="flext-cell c22">
+								<input type="number" name={{post.username}}_q1 value={{post.q1}} required>
+							</div>
+
+							<div class="flext-cell c22">
+								<input type="number" name={{post.username}}_q2 value={{post.q2}} required>
+							</div>
+
+							<div class="flext-cell c22">
+								<input type="number" name={{post.username}}_q3 value={{post.q3}} required>
+							</div>
+
+							<div class="flext-cell c22">
+								<input type="number" name={{post.username}}_q4 value={{post.q4}} required>
+							</div>
+
+							<div class="flext-cell c22">
+								<input type="number" name={{post.username}}_a1 value={{post.a1}} required>
+							</div>
+
+							<div class="flext-cell c22">
+								<input type="number" name={{post.username}}_a2 value={{post.a2}} required>
+							</div>
+
+							<div class="flext-cell c22">
+								<input type="number" name={{post.username}}_a3 value={{post.a3}} required>
+							</div>
+
+							<div class="flext-cell c22">
+								<input type="number" name={{post.username}}_midterm value={{post.midterm}} required>
+							</div>
+
+							<div class="flext-cell c22">
+								<input type="number" name={{post.username}}_final value={{post.final}} required>
+							</div>
+
+							<div class="flext-cell c22">
+								<input type="number" name={{post.username}}_practical value={{post.practical}} required>
+							</div>
+						</div>
+					{% endfor %}
+					
+					<br><br>
+					<input type="submit" value="SUBMIT CHANGES"/>
+				</form>
+			</div>
+			<br><br>
+
+		{% endif %}
+
+{% endblock %}

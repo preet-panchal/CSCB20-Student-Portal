@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block title %}CSCB20 - Resources{% endblock %}
+{% block resources %}<li><a id="active" class="nav-hover" href="/resources">Resources</a></li>{% endblock %}
+
+{% block content %}
+
+		<!-- List of Resources -->
+		<div class="content-container">
+			<section id="online-resources">
+				<h1 class="subtitle"><strong>Online Resources:</strong></h1>
+				<hr>
+				<ul>
+					<li>
+						<p><a class="subtitle" href="index.html">Course Website</a>:</p>
+						<p><em>Course information, lecture notes, tutorial material, 
+						important announcements, etc. will be posted on the course 
+						website. It is your responsibility to visit it frequently.</em></p>
+					</li>
+					<li>
+						<p>Beginner tutorial for <a class="subtitle" 
+						href="https://code.tutsplus.com/articles/sql-for-beginners--net-8200" 
+						target="blank">MySQL<a>.</p>
+					</li>
+					<li>
+						<p>Email communication:</p>
+						<p><em>Questions regarding the course material, assignments, 
+						midterm, etc. should be posed on the bulletin board. 
+						Questions about the assignment which you feel you cannot 
+						formulate without revealing your solution (should be very 
+						rare!), as well as questions and concerns regarding your 
+						personal matters should be directed to the instructor.</em></p>
+					</li>
+					<li>
+						<p><a class="subtitle" href="https://piazza.com/class/jr7mjhytaij3jc" 
+						target="blank">Discussion Board</a>:</p>
+						<p><em>You are encouraged to use the bulletin board to discuss 
+						the course material, pose questions on the assignments, etc. 
+						The bulletin board will be monitored by the instructor and by 
+						your TAs. Please, be very careful not to reveal (parts of) your 
+						solution on the bulletin board.</em></p>
+					</li>	
+				</ul>
+			</section> 
+			<br>
+		
+			<section id="software-info">
+				<h1 class="subtitle"><strong>Software and Documentation:</strong></h1>
+				<hr>
+				<ul>
+					<li>
+						<p>Logging into MatLab:</p>
+						<ol>
+							<li>
+								<p><em>Mac OS comes with the application "terminal". 
+								Simple click on it to run. Login to mathlab by typing: </em></p>
+								<p><em class="subtitle">ssh utorid@mathlab.utsc.utoronto.ca</em> 
+								and enter your password.</p>
+							</li>
+							<li>
+								<p><em>Windows - you will need a SSH client. PuTTY is a 
+								good free one. You can download and install here: 
+								<a class="subtitle" href="https://www.putty.org/" target="blank">PuTTY</a>
+								. Use the same command as above to login to mathlab: </em></p>
+								<p class="subtitle"><em>ssh utorid@mathlab.utsc.utoronto.ca.</em></p>
+							</li>
+						</ol>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<br><br>
+
+{% endblock %}

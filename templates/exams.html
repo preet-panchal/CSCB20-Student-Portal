@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}CSCB20 - Exams{% endblock %}
+{% block exams %}<li><a id="active" class="nav-hover" href="/exams">Exams</a></li>{% endblock %}
+
+{% block content %}
+
+		<!-- Midterm Tests -->
+		<div class="content-container">
+			<section id="midterm">
+			<h1 class="subtitle"><strong>Midterm Tests:</strong></h1>
+			<hr>
+			<p><em>There will be one midterm. The midterm will be 75min in length. 
+			You should go to either HW215 or HW216 depending on your last name 
+			as shown here: </em></p>
+			
+			
+			<a href="{{ url_for('static', filename='images/midterm-rooms-2017.jpg') }}">
+				<img src="{{ url_for('static', filename='images/midterm-rooms-2017.jpg') }}">
+			</a>
+		
+			<p>Peparing for the midterm: </p>
+			<ul>
+				<li>
+					<p><em>Understand all parts of A1.</em></p>
+				</li>
+				<li>
+					<p><em>The midterm will cover everything on databases that we did 
+					from the start until part way through the week 6 lecture.</em></p>
+				</li>
+			</ul>
+
+			<p>Once you have done some preparation, you can practice on a previous midterm:
+				<a class="subtitle" href="{{ url_for('static', filename='exams/testA.pdf') }}" target="blank"><em>Term Test</em></a>
+			</p>
+		</section> 
+	</div>
+	<br><br>
+
+{% endblock %}

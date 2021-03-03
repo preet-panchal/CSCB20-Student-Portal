@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!--
+Harshit Patel & Preet Panchal
+(1004779215) & (1005250247)
+CSCB20 - A. Abbas
+April/05/2019 
+-->
+
+<html>
+<!-- REGISTER -->
+	<head>
+		<title>CSCB20 - Feedback</title>
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/uoftlogo.png') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+	</head>
+	<body>
+		<div id="header">
+			<h1><strong>CSCB20 - Intro to Databases and Web Applications</strong></h1>
+		</div>
+		<br><br>
+		<br><br>
+
+		<div class="register-box">
+			<div class = "form">
+				{% if error %}
+					<p class="error"><strong>Notice: </strong> {{ error }}
+				{% endif %}
+				<br>
+				<h1 class="login-title">Register Here: </h1>
+
+				<form id="login-form" action="" method="POST">
+					<input type="text" name="first_name" placeholder="Enter Name" class="form-control" required>
+
+					<input type="text" name="username" placeholder="Enter Username" class="form-control" required>
+
+					<input type="password" name="password" placeholder="Enter Password" class="form-control" required>
+
+					<input type="text" name="email" placeholder="Enter UofT Email" class="form-control" required>
+
+					<select id="remark-dropdown" class="form-control" name="user_type">
+						<option value="student">student</option>
+						<option value="instructor">instructor</option>
+					</select>
+
+					<input type="submit" value="CREATE USER">
+					<p class="message">Already Registered? <a href="/login">Login</a></p>
+				</form>
+			</div>
+		</div> 
+	</body>
+
+</html>

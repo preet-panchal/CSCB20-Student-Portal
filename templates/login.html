@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<!--
+Harshit Patel & Preet Panchal
+(1004779215) & (1005250247)
+CSCB20 - A. Abbas
+April/05/2019 
+-->
+
+<html>
+<!-- LOGIN -->
+	<head>
+		<title>CSCB20 - Feedback</title>
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/uoftlogo.png') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+	</head>
+	<body>
+		<div id="header">
+			<h1><strong>CSCB20 - Intro to Databases and Web Applications</strong></h1>
+		</div>
+		<br><br>
+		<br><br>
+
+		<div class="login-box">
+			{% if error %}
+				<p class="error"><strong>Notice: </strong> {{ error }}
+			{% endif %}
+			<br>
+			<h1 class="login-title">Login Here</h1>
+
+			<form id="course-login" action="" method="POST">
+				<p>Username</p>
+				<input type="text" name="username" placeholder="Enter Username" class="form-control" required>
+
+				<p>Password</p>
+				<input type="password" name="password" placeholder="Enter Password" class="form-control" required>
+
+				<input type="submit" name="submit" value="LOGIN">
+				<!-- <a href="#"> Forgot your password?</a><br> -->
+				<a href="/register"> Don't have an account?</a>
+			</form>
+		</div>
+
+	</body>
+</html>

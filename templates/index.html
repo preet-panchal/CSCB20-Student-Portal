@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block title %}CSCB20 - Home{% endblock %}
+{% block home %}<li><a id="active" class="nav-hover" href="/index ">Home</a></li>	{% endblock %}
+{% block content %}
+
+		<!-- Course-Info -->
+		<div class="content-container">
+			{% if firstname %}
+				<h3><em>You are signed in as {{firstname}}.</em></h3>
+			{% endif %}
+			<br>
+
+			<section id="course-main">
+				<h1 class="subtitle"><strong>Course Description:</strong></h1>
+				<hr>
+				<p>A practical introduction to databases 
+				and Web app development. Databases: 
+				terminology and applications; creating, 
+				querying and updating databases; the 
+				entity-relationship model for database 
+				design. Web documents and applications: 
+				static and interactive documents; Web 
+				servers and dynamic server-generated 
+				content; Web application development and 
+				interface with databases.</p>
+			</section> 
+			
+			<section id="extra">
+				<p><strong class="subtitle">Experience (Recommended): </strong>
+				Some experience with programming in an 
+				imperative language such as Python, 
+				Java or C.</p>
+				<p><strong class="subtitle">Exclusion: </strong>This course may not be 
+				taken after - or concurrently with - 
+				any C- or D-level CSC course.</p>
+				<p><strong class="subtitle">Syllabus: </strong>All you need to 
+				know about this course: <a class="subtitle 
+				"href="home/syllabus.pdf"><em>syllabus.pdf</em></a></p>
+			</section>
+			<br>
+			
+			<!-- Instuctor-Info -->
+			<section id="instructor-info">
+				<h1 class="subtitle"><strong>Intructor Info:</strong></h1>
+				<hr>
+				<p class="subtitle"><strong>Dr. Anna Bretscher</strong></p>
+				
+				<a href="{{ url_for('static', filename='images/anna-bretscher.jpg') }}">
+					<img src="{{ url_for('static', filename='images/anna-bretscher.jpg') }}" class="anna">
+				</a>
+				
+				<p><strong class="subtitle">Email: </strong> bretscher@utsc.utoronto.ca</p>
+				<p><strong class="subtitle">Office: </strong> IC493</p>
+				<p><strong class="subtitle">Office Hours: </strong> Wednesday: 11:00-12:00</p>
+				<p><strong class="subtitle">Phone: </strong> (416) 208-4745</p>
+			</section>
+			<br>
+			
+			<!-- Course-Team -->
+			<section id="course-team">
+				<h1 class="subtitle"><strong>Course Team:</strong></h1>
+				<hr>
+				<br>
+			</section>
+		</div>
+
+		<!-- Flex table for Course-Team -->
+		<div class="courseTeam-table">
+			<div class="flex-table">
+				<div class="flext-cell c3 flex-th">NAME</div>
+				<div class="flext-cell c4 flex-th">LOCATION</div>
+				<div class="flext-cell c7 flex-th">OFFICE HOURS</div>		
+			</div>
+			
+			<div class="flex-table">
+				<div class="flext-cell c3">Dharmik Shah</div>
+				<div class="flext-cell c4">IC 404</div>
+				<div class="flext-cell c7"><p>Wednesday: 11:00-1:00<br>Thursday: 11:00-1:00</p></div>
+			</div>
+			<div class="flex-table">
+				<div class="flext-cell c3">Kevin Zhang</div>
+				<div class="flext-cell c4">IC 405</div>
+				<div class="flext-cell c7"><p>Monday: 4:00-5:00<br>Thursday: 11:00-12:00</p></div>
+			</div>
+			<div class="flex-table">
+				<div class="flext-cell c3">Brian Lam</div>
+				<div class="flext-cell c4">IC 406</div>
+				<div class="flext-cell c7"><p>Wednesday: 6:30-8:30<br>Friday: 11:00-12:00</p></div>
+			</div>
+			<div class="flex-table">
+				<div class="flext-cell c3">Xia Zhongyang</div>
+				<div class="flext-cell c4">IC 407</div>
+				<div class="flext-cell c7"><p>Tuesday: 10:00-12:00<br>Thursday: 5:00-7:00</p></div>
+			</div>
+			<div class="flex-table">
+				<div class="flext-cell c3">Suhailah Rahman</div>
+				<div class="flext-cell c4">IC 408</div>
+				<div class="flext-cell c7"><p>Monday: 10:00-12:00<br>Friday: 3:00-5:00</p></div>
+			</div>
+		</div>
+		<br><br>
+
+{% endblock %}

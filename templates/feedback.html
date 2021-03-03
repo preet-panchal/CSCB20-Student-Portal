@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block title %}CSCB20 - Feedbacks{% endblock %}
+{% block feedback %}<li><a id="active" class="nav-hover" href="/feedback">Feedback</a></li>{% endblock %}
+
+{% block content %}
+
+	{% if data %}  <!--if student-->
+
+		<!-- Feedback-title -->
+		<div class="content-container">
+			<section id="feedback-title">
+				<h1 class="subtitle"><strong>Course Feedback:</strong></h1>
+				<hr>
+				<p>Please help us improve our courses by filling out this form.</p>
+			</section>
+			<br>
+
+			<!-- Feedback-Form -->
+			<section class="feedback-box">
+				{% if notice %}
+					<p class="error" ><strong>Notice:</strong> {{ notice }}</p>
+					<br>
+				{% endif %}
+				
+				<h1 class="feedback-title"><strong>Feedback Form:</strong></h1>
+				<br>
+				<form id="feedback" action="" method="POST">
+					<select name="ins_username" id="remark-dropdown" class="form-control">
+						{% for name in data %}
+							<option value="{{ name.username }}">{{ name.first_name }}</option>
+						{% endfor %}
+					</select>
+					<br>
+				
+					<p>What do you like about the instructor teaching?</p>
+					<br>
+					<textarea name="msg1" class="form-control" 
+					placeholder="Your Feedback" rows="4" required></textarea>
+					<br>
+
+					<p>What do you recommend the instructor to do to improve their teaching?</p>
+					<br>
+					<textarea name="msg2" class="form-control" 
+					placeholder="Your Feedback" rows="4" required></textarea>
+					<br>
+
+					<p>What do you like about the labs?</p>
+					<br>
+					<textarea name="msg3" class="form-control" 
+					placeholder="Your Feedback" rows="4" required></textarea>
+					<br>
+
+					<p>What do you recommend the lab instructors to do to improve their lab teaching?</p>
+					<br>
+					<textarea name="msg4" class="form-control" 
+					placeholder="Your Feedback" rows="4" required></textarea>
+					<br>
+					<br>
+					<br>
+					<input type="submit" name="submit" value="SUBMIT FEEDBACK">
+				</form>
+			</section>
+		</div>
+
+		{% endif %}
+		{% if ins_feedbacks %}
+
+		<!-- Student's-Grades -->
+		<div class="content-container">
+			<section id="feedback-list">
+				<h3 class="subtitle"><strong>Feedback Received:</strong></h3>
+			</section>
+		</div>
+
+		<!-- table for received feedback --> 
+		<div class="main-table">
+				<div class="flex-table">
+					<div class="flext-cell c11 flex-th">DATE</div>
+					<div class="flext-cell c12 flex-th">Response to Q1</div>
+					<div class="flext-cell c12 flex-th">Response to Q2</div>
+					<div class="flext-cell c12 flex-th">Response to Q3</div>
+					<div class="flext-cell c12 flex-th">Response to Q4</div>
+				</div>
+				{% for feedback in ins_feedbacks %}
+					<div class="flex-table">
+						<div class="flext-cell c11">{{ feedback.DATE }}</div>
+						<div class="flext-cell c12">{{ feedback.que1 }}</div>
+						<div class="flext-cell c12">{{ feedback.que2 }}</div>
+						<div class="flext-cell c12">{{ feedback.que3 }}</div>
+						<div class="flext-cell c12">{{ feedback.que4 }}</div>
+					</div>
+				{% endfor %}
+			</div>
+		{% endif %}
+		<br><br>
+		
+
+{% endblock %}
